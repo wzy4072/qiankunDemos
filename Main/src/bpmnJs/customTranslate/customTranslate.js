@@ -1,0 +1,15 @@
+// import translations from './translations';
+// import translations from './../translations/zn';
+import translations from './translationsGerman'
+
+export default function customTranslate (template, replacements) {
+    replacements = replacements || {}
+
+    // Translate
+    template = translations[template] || template
+
+    // Replace
+    return template.replace(/{([^}]+)}/g, function (_, key) {
+        return replacements[key] || '{' + key + '}'
+    })
+}

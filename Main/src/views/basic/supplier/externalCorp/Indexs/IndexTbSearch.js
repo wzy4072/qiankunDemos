@@ -1,0 +1,28 @@
+import { getBaseDateConfig, getBaseInputConfig } from '@/utils/formDesignBaseConfig'
+export default {
+  tenantId: getBaseInputConfig(),
+  name: getBaseInputConfig(),
+  abbreviate: getBaseInputConfig(),
+  externalAcc: getBaseInputConfig(),
+  bank: getBaseInputConfig(),
+  province: getBaseInputConfig(),
+  city: getBaseInputConfig(),
+  corpId: getBaseInputConfig(),
+  linkMan: getBaseInputConfig(),
+  tel: getBaseInputConfig(),
+  fax: getBaseInputConfig(),
+  email: getBaseInputConfig(),
+  address: getBaseInputConfig(),
+  status: getBaseInputConfig(),
+  sourceSystem: getBaseInputConfig(),
+  isCommon: getBaseInputConfig(),
+  code: getBaseInputConfig(),
+  isNative: getBaseInputConfig(),
+  externalType: getBaseInputConfig(),
+  supplierId: getBaseInputConfig(),
+  attachmentId: getBaseInputConfig(),
+  auditStatus: getBaseInputConfig(),
+  bwType: getBaseInputConfig(),
+  createdTime: getBaseDateConfig(),
+  updateTime: getBaseDateConfig()
+}
