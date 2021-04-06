@@ -80,5 +80,11 @@ registerMicroApps([
     entry: '//localhost:5001',
     container: '#app-container',
     activeRule: '/app1'
+  },
+  {
+    name: 'appT2', // app name registered
+    entry: '//localhost:5002',
+    container: '#app-container',
+    activeRule: '/appT2'
   }
 ])
