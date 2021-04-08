@@ -23,17 +23,17 @@ const assetsCDN = {
   // webpack build externals
   externals: {
     // vue: 'Vue',
-    'vue-router': 'VueRouter',
-    vuex: 'Vuex',
-    axios: 'axios'
+    // 'vue-router': 'VueRouter',
+    // vuex: 'Vuex',
+    // axios: 'axios'
   },
   css: [],
   // https://unpkg.com/browse/vue@2.6.10/
   js: [
     // '//cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.min.js',
-    '//cdn.jsdelivr.net/npm/vue-router@3.1.3/dist/vue-router.min.js',
-    '//cdn.jsdelivr.net/npm/vuex@3.1.1/dist/vuex.min.js',
-    '//cdn.jsdelivr.net/npm/axios@0.19.0/dist/axios.min.js'
+    // '//cdn.jsdelivr.net/npm/vue-router@3.1.3/dist/vue-router.min.js',
+    // '//cdn.jsdelivr.net/npm/vuex@3.1.1/dist/vuex.min.js',
+    // '//cdn.jsdelivr.net/npm/axios@0.19.0/dist/axios.min.js'
   ]
 }
 
@@ -125,8 +125,9 @@ const vueConfig = {
         // target: `http://192.168.1.243:8443`,
         // target: `http://192.168.2.155:8443`,// wrc
         // target: `http://192.168.2.96:8443`, // ky
-        target: `http://192.168.2.230:8443`, // dq
+        // target: `http://192.168.2.230:8443`, // dq
         // target: `http://192.168.1.128:8443`, // fcf
+        target: `http://gateway.dev.192.168.0.174.xip.io`,
         // target: `http://192.168.2.154:8443`, // hyl
         // target: `http://192.168.1.51:8443`, // hx
         // target: `http://192.168.2.197:8443`, // ax
@@ -134,17 +135,8 @@ const vueConfig = {
         pathRewrite: {
           ['^' + process.env.VUE_APP_BASE_API]: ''
         }
-      },
-      '/local': {
-        target: `http://localhost:${4000}/mock`, // 前端模拟服务
-        ws: false,
-        changeOrigin: true,
-        pathRewrite: {
-          '/local': ''
-        }
       }
-    },
-    after: require('./mock/mock-server.js')
+    }
   },
   // disable source map in production
   productionSourceMap: false,

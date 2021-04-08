@@ -55,6 +55,10 @@
     <template v-else>
       <router-view v-if="reloadFlag" />
     </template> -->
+    <!-- <keep-alive>
+      <router-view :key="$route.path" />
+    </keep-alive> -->
+
     <router-view />
     <!-- 页面脚-->
     <template v-slot:footerRender>
